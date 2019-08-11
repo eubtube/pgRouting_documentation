@@ -191,7 +191,9 @@
 
 9. **Test Your Dataset With Some Routing Queries!**
 
-    Your possibilities for routing are limited only by the size of your network dataset!
+    Your possibilities for routing are limited only by the size ofWith Some Routing Queries!**
+
+    Your possibilities for routing are limited only by the number of ways and node in your network dataset!
 
     pgRouting has several different routing functions, which can be read about [here](http://docs.pgrouting.org/latest/en/routingFunctions.html#routing-functions).  We chose the [pgr_dijkstra](http://docs.pgrouting.org/latest/en/pgr_dijkstra.html#pgr-dijkstra) function, which gives the least-cost path between two nodes in the network dataset.  
   
