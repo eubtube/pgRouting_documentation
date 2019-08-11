@@ -98,16 +98,13 @@
     The DB Manager links directly to your Postgres server and is a surprisingly sussed out admin tool. It is where we ran most of our queries and has some wonderful features including the ability to turn your queries directly into QGIS layers.
     
     To access the SQL query module, click this icon: [insert image of sql icon]
-    [insert image of save as layer]2xsjey
-
-    To save a query as a layer, run the query, then click the "Load as new layer" box at the bottom, fill out the details, then click "Load" to see your layer in the QGIS canvas. This is the best way to visualize your queries going forward. 
-    
 
     To save a query as a layer, run the query, then click the "Load as new layer" box at the bottom, fill out the details, then click load to see your layer in the QGIS canvas. This is the best way to visualize your queries going forward. 
     
-    ![](https://i.imgur.com/YoZzCRm.png)
+    [insert image of save as layer]
 
-    ![](https://i.imgur.
+    With the DB Manager, you are also able to easily save your `SQL` queries within your QGIS project by giving a name to your query and clicking "save" at the top of the query dialogue.
+    
 8. **Understanding Your Data Tables**
     
     pgRouting creates several data tables for your network dataset, but the most important will be the `ways` table (the lines for your roads, the `ways_vertices_pgr` table (the connecting nodes for all of the lines in your dataset) and the `configuration` table (which gives you information about the type of road in the `ways` table).
@@ -194,9 +191,7 @@
 
 9. **Test Your Dataset With Some Routing Queries!**
 
-    Your possibilities for routing are limited only by the size ofWith Some Routing Queries!**
-
-    Your possibilities for routing are limited only by the number of ways and node in your network dataset!
+    Your possibilities for routing are limited only by the size of your network dataset!
 
     pgRouting has several different routing functions, which can be read about [here](http://docs.pgrouting.org/latest/en/routingFunctions.html#routing-functions).  We chose the [pgr_dijkstra](http://docs.pgrouting.org/latest/en/pgr_dijkstra.html#pgr-dijkstra) function, which gives the least-cost path between two nodes in the network dataset.  
   
@@ -322,7 +317,7 @@
     
     - As it stands, our `aggregate_cost` field doesn't mean much to us. Ideally, we'd like to get this in a format that gives us some useful information.  Travel time is an obvious option.
     - Because we didn't have a tremendous amount of data on speeds of roads and traffic for Dar Es Salaam, we ended up using a major tech company's routing technology combined with our local knowledge of travel times to apply a logarithmic equation to our `aggregate_cost` field.
-    - We created a new field `cost_mins` on our `sample_points_cost` layer from 10e1 above (make sure you add your table to Postgres to follow the step below. You could also do this in the field calculator of QGIS with different syntax), then applied the logarithmic equation in the field calculator as follows:
+    - We created a new field `cost_mins` on our 'sample_points_cost' layer from 10e1 above, then applied the logarithmic equation in the field calculator as follows:
         
         {Insert Image}
         
